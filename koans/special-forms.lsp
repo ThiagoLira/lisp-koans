@@ -108,17 +108,21 @@
                 (5 :five)
                 ;; t specifies default behavior
                 (t :unknown)))
-  (assert-equal ____ b)
+
+  (assert-equal :four b)
   "case can also check if a list of values contains
    the input"
   (setf c
         (case a (5 :five)
                 ((3 4) :three-or-four)))
-  (assert-equal ____ c))
+  (assert-equal :three-or-four c))
 
 (defun cartoon-dads (input)
     "you should be able to complete this case statement"
   (case input (:this-one-doesnt-happen :fancy-cat)
+	(:bart :homer)
+	(:stewie :peter)
+	(:stan :randy)
               (t :unknown)))
 
 (define-test test-your-own-case-statement
