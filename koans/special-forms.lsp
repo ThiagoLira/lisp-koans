@@ -140,7 +140,7 @@
          (lastname (case name ("John" "Doe")
                               ("Max" "Mustermann")
                               (t "Anonymous"))))
-  (assert-equal ____ lastname)))
+  (assert-equal "Anonymous" lastname)))
 
 (define-test test-cond
     "cond is the general purpose form for checking multiple
@@ -150,4 +150,4 @@
         (cond ((> a 0) :positive)
               ((< a 0) :negative)
               (t :zero)))
-  (assert-equal ____ c))
+  (assert-equal :positive c))
